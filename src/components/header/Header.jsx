@@ -12,7 +12,7 @@ const Header = () => {
    <header className='font-poppins flex items-center justify-evenly p-4 bg-white-200'>
     <div className='flex items-center'>
       <img src={logo} alt="sastoBazar logo"
-      className='h-12 w-full pr-2' />
+      className='h-8 w-full pr-2' />
     </div>
     <div className='flex items-center justify-center w-2/5 relative'>
 
