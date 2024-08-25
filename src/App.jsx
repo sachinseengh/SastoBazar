@@ -1,18 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { createElement, useState } from 'react'; // Import React explicitly
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import { FaCartShopping } from "react-icons/fa6";
+
+
+import './App.css';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-  return (
+   return  (
     <>
-      
-      <h1>Hello Worlds</h1>
+   
+     
+ <Header/>
+ <Footer/>
+   </>
+)
   
-    </>
-  )
 }
 
-export default App
+export default App;
