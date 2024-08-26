@@ -7,14 +7,18 @@ import { FaCartShopping } from "react-icons/fa6";
 import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import BannerPage from './pages/Banner/BannerPage';
+import TopHeader from './components/topHeader/TopHeader';
 
 
 function App() {
-  const [count, setCount] = useState(0);
+  
 
    return  (
     <>
+ <TopHeader></TopHeader>
  <Header/>
+ <BannerPage></BannerPage>
  <Footer/>
    </>
 )

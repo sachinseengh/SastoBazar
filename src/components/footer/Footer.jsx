@@ -10,25 +10,25 @@ const Footer = () => {
         <div>
           <h4 className='text-left pl-0'>Customer Care</h4>
           <ol className='text-left pl-0 font-light'>
-          <li >Help Center</li>
-          <li>How to Buy</li>
-          <li>Returns & Refunds</li>
-          <li>Contact Us</li>
+          <li className='my-2' >Help Center</li>
+          <li className='my-2'>How to Buy</li>
+          <li className='my-2'>Returns & Refunds</li>
+          <li className='my-2'>Contact Us</li>
           </ol>
         </div>
       <div>
-        <h4 className='text-left pl-0'>Daraz</h4>
-        <ol className='text-left pl-0 font-light'>
-        <li>Help Center</li>
-        <li>How to Buy</li>
-        <li>Returns & Refunds</li>
-        <li>Contact Us</li>
+        <h4 className='text-left pl-0'>Sasto Bazar</h4>
+        <ol className='text-left pl-0 font-light '>
+        <li className='my-2'>Help Center</li>
+        <li className='my-2'>How to Buy</li>
+        <li className='my-2'>Returns & Refunds</li>
+        <li className='my-2'>Contact Us</li>
         </ol>
       </div>
       <div >
         
       <h4 >Happy Shopping</h4>
-      <h6 className='font-light text-left ' ><a href='' className=' text-gray-500'>Download App</a></h6>  
+      <h6 className='font-light text-left ' ><a href='' className=' text-black-500'>Download App</a></h6>  
       </div>
 
       <div className='d-flex justify-normal'>
@@ -41,6 +41,7 @@ const Footer = () => {
       
       </div>
       </div>
+      
     </div>
   );
 };
