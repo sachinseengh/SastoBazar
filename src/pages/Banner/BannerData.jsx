@@ -1,8 +1,8 @@
 
-import Banner1 from '../../assets/images/sirad1.jpg';
-import Banner2 from '../../assets/images/sirad2.jpg';
-import Banner3 from '../../assets/images/sirad3.jpg';
-import Banner4 from '../../assets/images/sirad4.jpg';
+import Banner1 from '../../assets/images/ad1.png';
+import Banner2 from '../../assets/images/ad2.png';
+import Banner3 from '../../assets/images/ad3.png';
+import Banner4 from '../../assets/images/ad4.png';
 
 export const items =[{
     id:1,

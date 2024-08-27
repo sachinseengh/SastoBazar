@@ -10,7 +10,7 @@ const BannerPage = () => {
   
   return (
     <>
-    <div className='container '>
+    <div className='mx-36 w-3/4 my-4 '>
     <Carousel indicators={false}>
       {items.map((value,index)=>{
 
@@ -18,7 +18,7 @@ const BannerPage = () => {
         // if we use ( ) call back then we donot need return
         return(
             <Carousel.Item key={value.id}>
-            <img src={value.image} alt={value.title} />
+            <img src={value.image} alt={value.title} className='h-96 '/>
         </Carousel.Item>
         
         )

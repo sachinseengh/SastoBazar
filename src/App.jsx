@@ -2,6 +2,7 @@ import React, { createElement, useState } from 'react'; // Import React explicit
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import { FaCartShopping } from "react-icons/fa6";
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 
 import './App.css';
@@ -9,6 +10,8 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import BannerPage from './pages/Banner/BannerPage';
 import TopHeader from './components/topHeader/TopHeader';
+import Login from './pages/User/Login/Login';
+import Home from './pages/Banner/Home/Home';
 
 
 function App() {
@@ -16,10 +19,21 @@ function App() {
 
    return  (
     <>
- <TopHeader></TopHeader>
- <Header/>
- <BannerPage></BannerPage>
- <Footer/>
+    <BrowserRouter>
+    <TopHeader/>
+    <Header/>
+
+    <Routes>
+    <Route path='/' element ={<Home/>}/>
+
+    <Route path='/sastobazar-login' element ={<Login></Login>}/>
+    
+
+    </Routes>
+    <Footer />
+    </BrowserRouter>
+ 
+
    </>
 )
   

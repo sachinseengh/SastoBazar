@@ -5,7 +5,7 @@ import appstore from '../../assets/images/appstore.png'
 
 const Footer = () => {
   return (
-    <div className="bg-orange-500 text-white text-center fixed p-4 pb-0 pt-8 bottom-0 left-0 w-full  font-poppins text-sm">
+    <div className="bg-orange-500 text-white text-center mt-5  p-4 pb-3 pt-8 bottom-0 left-0 w-full  font-poppins text-sm">
          <div className='d-flex justify-around container '>
         <div>
           <h4 className='text-left pl-0'>Customer Care</h4>
@@ -41,6 +41,8 @@ const Footer = () => {
       
       </div>
       </div>
+      <hr />
+      <span >@ 2024 SastoBazar. All rights Reserved </span>
       
     </div>
   );

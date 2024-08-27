@@ -3,6 +3,7 @@ import React from 'react'
 import logo from '../../assets/images/logo.png'
 
 import {FiHeart,FiSearch,FiShoppingCart} from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 
 
@@ -11,8 +12,8 @@ const Header = () => {
    <>
    <header className='font-poppins flex items-center justify-evenly p-4 bg-white-200'>
     <div className='flex items-center'>
-      <img src={logo} alt="sastoBazar logo"
-      className='h-8 w-full pr-2' />
+    <Link to="/">  <img src={logo} alt="sastoBazar logo"
+      className='h-8 w-full pr-2' /></Link>
     </div>
     <div className='flex items-center justify-center w-2/5 relative'>
 
