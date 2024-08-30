@@ -5,6 +5,8 @@ import appstore from '../../assets/images/appstore.png'
 
 const Footer = (props) => {
   return (
+    <>
+    <hr/>
     <div className={`bg-${props.mode === "light" ? "black":"black"}-300  text-${props.mode === "light" ? "black":"white"}   text-center mt-5  p-4 pb-3 pt-8 bottom-0 left-0 w-full  font-poppins text-sm`}>
          <div className='d-flex justify-around container '>
         <div>
@@ -42,9 +44,11 @@ const Footer = (props) => {
       </div>
       </div>
       <hr />
+
       <span >@ 2024 SastoBazar. All rights Reserved </span>
       
     </div>
+    </>
   );
 };
 
