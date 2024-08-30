@@ -3,9 +3,9 @@ import playstore from '../../assets/images/googleplay.png'
 import appstore from '../../assets/images/appstore.png'
 
 
-const Footer = () => {
+const Footer = (props) => {
   return (
-    <div className="bg-orange-500 text-white text-center mt-5  p-4 pb-3 pt-8 bottom-0 left-0 w-full  font-poppins text-sm">
+    <div className={`bg-${props.mode === "light" ? "black":"black"}-300  text-${props.mode === "light" ? "black":"white"}   text-center mt-5  p-4 pb-3 pt-8 bottom-0 left-0 w-full  font-poppins text-sm`}>
          <div className='d-flex justify-around container '>
         <div>
           <h4 className='text-left pl-0'>Customer Care</h4>

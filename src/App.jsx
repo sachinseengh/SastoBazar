@@ -15,22 +15,41 @@ import Home from './pages/Banner/Home/Home';
 
 
 function App() {
+
+   
+  const toggleMode=()=>{
+
+   if(mode==="light"){
+     setMode("dark");
+     document.body.style.backgroundColor='#042743';
+     
+   
+
+   }else{
+     setMode("light");
+     document.body.style.backgroundColor='white';
+   
+     
+   }
+ }
+ const [mode,setMode]=useState("light");
+
   
 
    return  (
     <>
     <BrowserRouter>
-    <TopHeader/>
-    <Header/>
+    <TopHeader mode={mode} toggleMode={toggleMode} />
+    <Header mode={mode} toggleMode={toggleMode}/>
 
     <Routes>
-    <Route path='/' element ={<Home/>}/>
+    <Route path='/' element ={<Home/>} />
 
     <Route path='/sastobazar-login' element ={<Login></Login>}/>
     
 
     </Routes>
-    <Footer />
+    <Footer mode={mode} toggleMode={toggleMode} />
     </BrowserRouter>
  
 

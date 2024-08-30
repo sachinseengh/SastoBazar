@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom'
 
 
 
-const Header = () => {
+const Header = (props) => {
   return (
    <>
-   <header className='font-poppins flex items-center justify-evenly p-4 bg-white-200'>
+   <header className={`font-poppins flex items-center justify-evenly p-4 bg-${props.mode}-200 text-${props.mode === "light" ? "black":"white"} `}>
     <div className='flex items-center'>
     <Link to="/">  <img src={logo} alt="sastoBazar logo"
       className='h-8 w-full pr-2' /></Link>
@@ -29,12 +29,12 @@ const Header = () => {
 
     <div className='flex items-center ml-2'>
       <div className='flex items-center'>
-        <FiHeart className="h-6 w-6 text-gray-700"/>
-        <span className="ml-1 text-gray-500">Wishlist</span>
+        <FiHeart className="h-6 w-6 "/>
+        <span className="ml-1 ">Wishlist</span>
       </div>
       <div className='ml-4'>
         <button className='relative'>
-          <FiShoppingCart className="h-6 w-6 text-gray-700"/>
+          <FiShoppingCart className="h-6 w-6 "/>
           <span className='absolute top-0 right-0 inline-flex items-center justify-center
           px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2
           bg-orange-500 rounded-fill'></span>
