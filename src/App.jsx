@@ -9,6 +9,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import BannerPage from './pages/Banner/BannerPage';
+import Contact from './pages/Helps/Contact'
 import TopHeader from './components/topHeader/TopHeader';
 import Login from './pages/User/Login/Login';
 import Home from './pages/Banner/Home/Home';
@@ -45,8 +46,9 @@ function App() {
     <Routes>
     <Route path='/' element ={<Home/>} />
 
-    <Route path='/sastobazar-login' element ={<Login></Login>}/>
+    <Route path='/sastobazar-login' element ={<Login mode={mode} toggleMode={toggleMode} ></Login>}/>
     
+    <Route path ="/contact" element={<Contact></Contact>}></Route>
 
     </Routes>
     <Footer mode={mode} toggleMode={toggleMode} />

@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Login = () => {
+const Login = (props) => {
   return (
     <>
     <div className=' w-full '>
-    <h6 className=' font-poppins text-2xl text-center pt-4'>Welcome to Sasto Bazar login page</h6>
+    <h6 className={`font-poppins text-2xl text-${props.mode === "light" ? "black":"white"} text-center pt-4'>Welcome to Sasto Bazar login page pt-4`}>Welcome to Sasto Bazar Login page</h6>
 
 
-    <div className='login-page  text-left  mx-96 pt-4 pl-36 pb-16  pb-4 bg-gray-200  '>
+    <div className={` login-page  text-left text-${props.mode === "light" ? "black":"white"}  mx-96 pt-12 pl-36 `}>
         <div>
     <h6 className='pb-3'>Login with Email and password</h6>
 <form action="#">
@@ -19,7 +19,7 @@ const Login = () => {
     <input 
     type="text"
     placeholder="Enter Email or phone" 
-    className='text-grey border border-gray-300 w-3/4 py-2 px-2 pr-8 focus:outline-none'
+    className={`text-grey border bg-${props.mode === "light" ? "":"black"} border-gray-300 w-3/4 py-2 px-2 pr-8 focus:outline-none`}
     />
     
     </div>
@@ -33,7 +33,7 @@ const Login = () => {
     <input 
     type="password"
     placeholder="Enter password" 
-    className='text-grey border border-gray-300 w-3/4 py-2 px-2 pr-8 focus:outline-none'
+    className={`text-grey  bg-${props.mode === "light" ? "":"black"} border border-gray-300 w-3/4 py-2 px-2 pr-8 focus:outline-none`}
     />
     </div>
     </div>
