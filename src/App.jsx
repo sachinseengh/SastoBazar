@@ -13,6 +13,9 @@ import Contact from './pages/Helps/Contact'
 import TopHeader from './components/topHeader/TopHeader';
 import Login from './pages/User/Login/Login';
 import Home from './pages/Banner/Home/Home';
+import NotFound from './pages/nonFound/NotFound';
+import Aboutus from './pages/About/Aboutus';
+import LearnMore from './pages/Learnmore/LearnMore';
 
 
 function App() {
@@ -40,7 +43,7 @@ function App() {
    return  (
     <>
     <BrowserRouter>
-    <TopHeader mode={mode} toggleMode={toggleMode} />
+    <TopHeader  title="sasto Rewards" mode={mode} toggleMode={toggleMode} />
     <Header mode={mode} toggleMode={toggleMode}/>
 
     <Routes>
@@ -49,6 +52,10 @@ function App() {
     <Route path='/sastobazar-login' element ={<Login mode={mode} toggleMode={toggleMode} ></Login>}/>
     
     <Route path ="/contact" element={<Contact></Contact>}></Route>
+    <Route path="*" element={<NotFound mode={mode} toggleMode={toggleMode} ></NotFound>}/>
+    <Route path="/aboutus" element={<Aboutus mode={mode} toggleMode={toggleMode} ></Aboutus>}/>
+    <Route path="/learnmore" element={<LearnMore mode={mode} toggleMode={toggleMode} ></LearnMore>}/>
+
 
     </Routes>
     <Footer mode={mode} toggleMode={toggleMode} />
