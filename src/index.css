@@ -11,9 +11,9 @@
 
 @keyframes moveUpDown{
     0%{
-        transform: translate(10px);
+        transform: translateY(10px);
     }
     100%{
-        transform: translate(-10px);
+        transform: translateY(-10px);
     }
 }

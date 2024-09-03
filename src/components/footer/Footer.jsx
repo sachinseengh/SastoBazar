@@ -13,9 +13,9 @@ const Footer = (props) => {
     <>
  
 
- 
 
-    <div className={`bg-${props.mode === "light" ?"orange":"black"}-400  text-${props.mode === "light" ? "white":"white"}   text-center mt-5  p-4 pb-3 pt-4 bottom-0 left-0 w-full  font-poppins text-sm`}>
+
+    <div className={`  text-${props.mode === "light" ? "black":"white"}   text-center mt-5  p-4 pb-3 pt-4 bottom-0 left-0 w-full  font-poppins text-sm`}>
     
     <hr />
          <div className='d-flex justify-around container '>

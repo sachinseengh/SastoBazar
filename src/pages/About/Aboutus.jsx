@@ -2,7 +2,7 @@ import React from 'react'
 import CommonPages from '../CommonPages/CommonPages'
 import Image from '../../assets/images/aboutus.png'
 
-const Aboutus = () => {
+const Aboutus = (props) => {
   return (
  <>
 <CommonPages 
@@ -15,6 +15,7 @@ btnAbout ="Learn more"
 visit ="learnmore"
 image = {Image}
 
+mode = {props.mode}
 
 ></CommonPages>
  </>

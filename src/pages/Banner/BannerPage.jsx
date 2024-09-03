@@ -10,7 +10,7 @@ const BannerPage = () => {
   
   return (
     <>
-    <div className='mx-36 w-3/4 my-4 '>
+    <div className='mx-36 w-3/4 my-4  '>
     <Carousel indicators={false}>
       {items.map((value,index)=>{
 

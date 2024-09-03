@@ -1,59 +1,116 @@
-import React from 'react'
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
-const Login = (props) => {
+const Login = () => {
+  const [loginValue, setLoginValue] = useState({
+    email: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    console.log(e.target.value);
+    let { name, value } = e.target;
+    setLoginValue({ ...loginValue, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const config = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginValue),
+      };
+      const res = await fetch('http://httpbin.org/post', config);
+      if(res.ok) {
+        toast.success("Login Succesfull!");
+      }else{
+        toast.error("Invalid login details!")
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Unable to connect")
+    }
+  };
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <>
-    <div className=' w-full '>
-    <h6 className={`font-poppins text-2xl text-${props.mode === "light" ? "black":"white"} text-center pt-4'>Welcome to Sasto Bazar login page pt-4`}>Welcome to Sasto Bazar Login page</h6>
-
-
-    <div className={` login-page  text-left text-${props.mode === "light" ? "black":"white"}  mx-96 pt-12 pl-36 `}>
-        <div>
-    <h6 className='pb-3'>Login with Email and password</h6>
-<form action="#">
-    <div className='Email pb-4'>
-        <div className='mb-2'>
-        <span >Email/Phone:</span>
+      <div className="py-12 bg-slate-200">
+        <div className="font-poppins max-w-md mx-auto p-4 bg-slate-50 shadow-md rounded-md">
+          <h2 className="text-2xl font-semibold mb-4 text-slate-900">Login</h2>
+          <span className="mb-2 block  text-slate-900">
+            Please enter your valid credentials
+          </span>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-slate-600"
+              >
+                Email
+              </label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                className="mt-1 px-2 py-3.5 border border-gray-300 rounded-md w-full focus:outline-slate-200 text-sm"
+                value={loginValue.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-4 relative">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-slate-600"
+              >
+                Password
+              </label>
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                className="mt-1 px-2 py-3.5 border border-gray-300 rounded-md w-full focus:outline-slate-200 text-sm"
+                value={loginValue.password}
+                onChange={handleChange}
+              />
+              <span
+                onClick={togglePasswordVisibility}
+                className="absolute top-12 -translate-y-1/2 right-4 hover:cursor-pointer"
+              >
+                {showPassword ? <FaEye /> : <FaEyeSlash />}
+              </span>
+            </div>
+            <div className="mt-4">
+              <button type="submit"
+                className="py-2.5 px-4 w-full bg-green-500 text-white rounded-md hover:bg-green-600 duration-300 focus:outline-none"
+              >
+                Login
+              </button>
+            </div>
+            <span className="block text-center mt-4">
+              Don't have an account?
+              <NavLink
+                to="/sastobazar-register"
+                className="ml-2 no-underline text-green-500 duration-300 hover:text-green-600"
+              >
+                Register
+              </NavLink>
+            </span>
+          </form>
         </div>
-        <div>
-    <input 
-    type="text"
-    placeholder="Enter Email or phone" 
-    className={`text-grey border bg-${props.mode === "light" ? "":"black"} border-gray-300 w-3/4 py-2 px-2 pr-8 focus:outline-none`}
-    />
-    
-    </div>
-    </div>
-
-    <div className='password'>
-        <div className='mb-2'> 
-        <span>Password:</span>
-        </div>
-        <div>
-    <input 
-    type="password"
-    placeholder="Enter password" 
-    className={`text-grey  bg-${props.mode === "light" ? "":"black"} border border-gray-300 w-3/4 py-2 px-2 pr-8 focus:outline-none`}
-    />
-    </div>
-    </div>
-
-
-    <button type="button" class=" my-6 w-3/4 focus:outline-none text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium  text-sm px-5 py-2.5 me-2 mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">Login</button>
-
-    
-  <div className='font-poppins pl-12 pt-2'>
-    <span>Don't have an accout ? Click here</span>
-    
-    </div>
-    </form>
-   
-    </div>
-</div>
-</div>
-   
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default Login

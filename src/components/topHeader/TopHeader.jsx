@@ -3,7 +3,7 @@ import { FaViber, FaWhatsapp } from 'react-icons/fa6'
 import { Link, NavLink } from 'react-router-dom'
 
 const TopHeader = (props) => {
-console.log(props);
+// console.log(props);
   return (
     <>
     <div className={`font-poppins pt-3 border-b p-2 px-4  text-${props.mode === "light" ? "black":"white"} flex justify-between items-center`}>

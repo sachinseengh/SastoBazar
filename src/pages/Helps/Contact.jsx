@@ -4,7 +4,7 @@ import logo from '../../assets/images/favicon.png'
 const Contact = () => {
   return (
     <>
-    <div className='container d-flex  text-white justify-start pl-24 mt-20 pt-2 pb-2  bg-gray-600'>
+    <div className='container d-flex  text-black justify-start pl-24 mt-20 pt-2 pb-2  bg-[#F8F8FA]'>
 
       <div className=''>
         <img src={logo} alt=""  className='pt-1' height="100%" width="100%" />
