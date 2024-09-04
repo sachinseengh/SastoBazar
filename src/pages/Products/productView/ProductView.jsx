@@ -81,7 +81,7 @@ const ProductView = ({products,isloading}) => {
                         rounded w-64'>
                             Add to cart
                         </button>
-                        <button className='bg-green-900 hover:bg-green-800 text-white
+                        <button className='bg-orange-500 hover:bg-orange-500 text-white
                         font-bold py-2 px-4 rounded w-64'>
                             Buy Now
 
