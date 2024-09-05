@@ -92,7 +92,7 @@ const Login = () => {
             </div>
             <div className="mt-4">
               <button type="submit"
-                className="py-2.5 px-4 w-full bg-green-500 text-white rounded-md hover:bg-green-600 duration-300 focus:outline-none"
+                className="py-2.5 px-4 w-full bg-orange-500 text-white rounded-md hover:bg-orange-600 duration-300 focus:outline-none"
               >
                 Login
               </button>
@@ -101,7 +101,7 @@ const Login = () => {
               Don't have an account?
               <NavLink
                 to="/sastobazar-register"
-                className="ml-2 no-underline text-green-500 duration-300 hover:text-green-600"
+                className="ml-2 no-underline text-orange-500 duration-300 hover:text-orange-600"
               >
                 Register
               </NavLink>
