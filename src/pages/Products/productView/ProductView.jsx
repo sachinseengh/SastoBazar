@@ -28,7 +28,7 @@ const ProductView = ({products,isloading}) => {
     </div>
     }
     if(!singleProduct){
-        return <h1>No Data found</h1>
+        return <h1>No Product found</h1>
     }
   return (
     <>
